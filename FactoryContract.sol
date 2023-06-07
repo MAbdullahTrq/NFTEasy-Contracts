@@ -43,4 +43,5 @@ contract NFTEasyContractFactory {
     function withdraw() public payable{
         payable(factoryAdmin).transfer(address(this).balance);
     }
+    
 }

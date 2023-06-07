@@ -82,4 +82,8 @@ contract NFTEasy is ERC721, ERC721URIStorage {
         require(_isApprovedOrOwner(msg.sender, tokenId), "NFTEasy: Caller is not the owner or approved");
         _transfer(from, to, tokenId);
     }
+
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721URIStorage) returns (bool) {
+        return super.supportsInterface(interfaceId);
+    }
 }
